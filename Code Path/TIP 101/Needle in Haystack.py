@@ -18,8 +18,8 @@ def strStr(haystack,needle):
         return -1 
     
     
-    for i in range(len(haystack) - len(needle)+ 1 ):
-        if haystack[i:i +len(needle)] == needle:
+    for i in range(len(haystack) - len(needle)+ 1 ):  # the lenght of needle in haystack
+        if haystack[i:i +len(needle)] == needle:      # Are the characters equal?
             return i 
         
     return -1  
