@@ -13,7 +13,6 @@ def is_valid_post_format(posts):
 
 
 
-
 def reverse_comments_queue(comments):
     stack = []
 
