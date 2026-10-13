@@ -32,3 +32,8 @@ def shoePair(shoesize, shoesum):
             return [sizes[sub], i] 
         sizes[shoesize] = i
     return[-1,-1]
+
+
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+        prevMap ={}   #index: value
+        
