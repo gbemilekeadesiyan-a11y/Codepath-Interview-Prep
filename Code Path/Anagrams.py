@@ -5,7 +5,9 @@ def isAnagram(self, s: str, t: str) -> bool:
     if len(s) != len(t): 
         return False
 
-    countS, countT = {}, {}
+    countS = {}
+    countT = {}
+    
     for letter in range(len(s)):
         countS[s[letter]] = 1 + countS.get(countS[letter],0)
         countT[t[letter]] = 1 + countT.get(countT[t[letter],0])
@@ -26,4 +28,21 @@ def isAnagram(s, t):
     return countS == countT  
 
 
+# s = {}
+# l =[]
+# s =set() or ()
+str = "" 
+tuple = ()
 
+
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        res = defaultdict(list)
+        for s in strs:
+            count = [0] * 26
+        
+            for c in s:
+                count[ord(c)-ord("a")] += 1
+        
+            res[tuple(count)].append(s)
+        return list(res.values())
